@@ -1,0 +1,220 @@
+section.hero
+  .container
+    .hero__grid
+      .hero__information
+        h1 The Found Program
+        p There’s no one-and-done solution when it comes to sustainable weight care. With Found, five key factors come together on your journey to reach your goals
+        .types
+          .types__el
+            a.types__button.types__button--violet.is-active(href="#" js-type-btn data-color="violet")
+              .icon
+                //- img(src="img/doctor.svg", alt="")
+                img(src="img/doctor.png", alt="")
+              span
+                span.hidden Doctor
+                span.visible Doctor
+          .types__el
+            a.types__button.types__button--blue(href="#" js-type-btn data-color="blue")
+              .icon
+                img(src="img/coach.svg", alt="")
+              span
+                span.hidden Coach
+                span.visible Coach
+          .types__el
+            a.types__button.types__button--green(href="#" js-type-btn data-color="green")
+              .icon
+                img(src="img/app.svg", alt="")
+              span
+                span.hidden App
+                span.visible App
+          .types__el
+            a.types__button.types__button--yellow(href="#" js-type-btn data-color="yellow")
+              .icon
+                img(src="img/medication.svg", alt="")
+              span
+                span.hidden Medication
+                span.visible Medication
+          .types__el
+            a.types__button.types__button--orange(href="#" js-type-btn data-color="orange")
+              .icon
+                img(src="img/community.svg", alt="")
+              span
+                span.hidden Community
+                span.visible Community
+
+
+      .hero__slider
+        .hero__bg-container
+          svg.desktop.hero__bg(viewBox='0 0 720 834' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M0 76.06V0h720v373.9a130 130 0 0 1-74.79 117.68l-136.78 64.17c-33.04 15.5-36.38 61.2-5.92 81.34l173.17 114.48A98.81 98.81 0 0 1 720 834H0V537C0 485.5 21.47 436.3 59.26 401.3l170.03-157.6c15.68-14.54 8.52-40.71-12.38-45.23l-143.18-31A93.52 93.52 0 0 1 0 76.06Z' fill='#5A58CF')
+
+        .hero__bg-container
+          svg.mobile.hero__bg(viewBox='0 0 375 508' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M356.4 0H375v508H246.2a113.8 113.8 0 0 1-105.36-70.8c-12.88-31.53-56.4-34.46-73.38-4.93L35.8 487.29A41.3 41.3 0 0 1 0 508V0h145.36a80 80 0 0 1 44.81 13.73l65.97 44.6a22.96 22.96 0 0 0 34.57-11.52A69.5 69.5 0 0 1 356.4 0Z' fill='#5A58CF')
+
+        
+        .hero__slider-cont
+          div(js-tns-slider)
+            .slide
+              //- card begin
+              .card-container
+                .card.card--violet
+                  .card__title
+                    img.doctor(src="img/doctor-icon.svg")
+                    p Board-certified doctors
+                  .card__list
+                    p Board-certified and specifically trained on weight loss medication
+                    p Virtual appointments, no in-person office visits required
+                    p Found doctors customize the program to your specific needs
+                  a.btn(href="#") Continue
+                  p.card__price Starting at $99/month
+
+            .slide
+              //- card begin
+              .card-container
+                .card.card--blue
+                  .card__title
+                    img.coach(src="img/coach-icon.svg")
+                    p Personal health coach
+                  .card__list
+                    p Coaches tailor your movement and nutrition plan to fit your needs
+                    p On-demand availability to answer all of your questions
+                    p Build sustainable habits with the help of your coach
+                  a.btn(href="#") Continue
+                  p.card__price Starting at $99/month
+
+            .slide
+              //- card begin
+              .card-container
+                .card.card--green
+                  .card__title
+                    img.app(src="img/app-icon.svg")
+                    p Found mobile app
+                  .card__list
+                    p Keep track of your progress by logging your routines
+                    p Coaches use logged routines to personalize your weight loss program
+                    p Integrates with Apple Health and Google Fit
+                  a.btn(href="#") Continue
+                  p.card__price Starting at $99/month
+
+            .slide
+              //- card begin
+              .card-container
+                .card.card--yellow
+                  .card__title
+                    img.medication(src="img/medication-icon.svg")
+                    p Prescription medication
+                  p.card__sub-title Our medical team provides access to the widest set of prescriptions on the market, including (but not limited to):
+                  .card__elements
+                    .card__el
+                      a.card__el-button(href="#") Phentermine
+                        img(src="img/i-icon.svg", alt="")
+                    .card__el
+                      a.card__el-button(href="#") GLP-1
+                        img(src="img/i-icon.svg", alt="")
+                    .card__el
+                      a.card__el-button(href="#") Metformin
+                        img(src="img/i-icon.svg", alt="")
+                  .card__list
+                    p Work directly with our doctors to find the medication right for you
+                    p Medication delivered to your door
+                    p No insurance requirements
+                  a.btn(href="#") Continue
+                  p.card__price Starting at $99/month
+
+            .slide
+              //- card begin
+              .card-container
+                .card.card--orange
+                  .card__title
+                    img.community(src="img/community-icon.svg")
+                    p Supportive community
+                  .card__list
+                    p Celebrate your journey with thousands of other members
+                    p Share recipes, weight loss milestones, and roadblocks
+                    p The Found team is actively involved to make sure you have the best experience
+                  a.btn(href="#") Continue
+                  p.card__price Starting at $99/month
+
+          //- .slider(js-slick-slider)
+
+          //-   .slide
+          //-     //- card begin
+          //-     .card-container
+          //-       .card.card--violet
+          //-         .card__title
+          //-           img.doctor(src="img/doctor-icon.svg")
+          //-           p Board-certified doctors
+          //-         .card__list
+          //-           p Board-certified and specifically trained on weight loss medication
+          //-           p Virtual appointments, no in-person office visits required
+          //-           p Found doctors customize the program to your specific needs
+          //-         a.btn(href="#") Continue
+          //-         p.card__price Starting at $99/month
+
+          //-   .slide
+          //-     //- card begin
+          //-     .card-container
+          //-       .card.card--blue
+          //-         .card__title
+          //-           img.coach(src="img/coach-icon.svg")
+          //-           p Personal health coach
+          //-         .card__list
+          //-           p Coaches tailor your movement and nutrition plan to fit your needs
+          //-           p On-demand availability to answer all of your questions
+          //-           p Build sustainable habits with the help of your coach
+          //-         a.btn(href="#") Continue
+          //-         p.card__price Starting at $99/month
+
+          //-   .slide
+          //-     //- card begin
+          //-     .card-container
+          //-       .card.card--green
+          //-         .card__title
+          //-           img.app(src="img/app-icon.svg")
+          //-           p Found mobile app
+          //-         .card__list
+          //-           p Keep track of your progress by logging your routines
+          //-           p Coaches use logged routines to personalize your weight loss program
+          //-           p Integrates with Apple Health and Google Fit
+          //-         a.btn(href="#") Continue
+          //-         p.card__price Starting at $99/month
+
+          //-   .slide
+          //-     //- card begin
+          //-     .card-container
+          //-       .card.card--yellow
+          //-         .card__title
+          //-           img.medication(src="img/medication-icon.svg")
+          //-           p Prescription medication
+          //-         p.card__sub-title Our medical team provides access to the widest set of prescriptions on the market, including (but not limited to):
+          //-         .card__elements
+          //-           .card__el
+          //-             a.card__el-button(href="#") Phentermine
+          //-               img(src="img/i-icon.svg", alt="")
+          //-           .card__el
+          //-             a.card__el-button(href="#") GLP-1
+          //-               img(src="img/i-icon.svg", alt="")
+          //-           .card__el
+          //-             a.card__el-button(href="#") Metformin
+          //-               img(src="img/i-icon.svg", alt="")
+          //-         .card__list
+          //-           p Work directly with our doctors to find the medication right for you
+          //-           p Medication delivered to your door
+          //-           p No insurance requirements
+          //-         a.btn(href="#") Continue
+          //-         p.card__price Starting at $99/month
+
+          //-   .slide
+          //-     //- card begin
+          //-     .card-container
+          //-       .card.card--orange
+          //-         .card__title
+          //-           img.community(src="img/community-icon.svg")
+          //-           p Supportive community
+          //-         .card__list
+          //-           p Celebrate your journey with thousands of other members
+          //-           p Share recipes, weight loss milestones, and roadblocks
+          //-           p The Found team is actively involved to make sure you have the best experience
+          //-         a.btn(href="#") Continue
+          //-         p.card__price Starting at $99/month

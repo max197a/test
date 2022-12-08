@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    include _head
+
+  body
+    
+    .page(class=outClass)
+      block header
+        //- include ../components/_header
+        
+      main
+        block content
+
+      block footer
+        //- include ../components/_footer
+        //- include ../components/_popups
+        
+    block scripts
+      include _scripts

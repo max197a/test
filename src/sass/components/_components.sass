@@ -1,0 +1,336 @@
+/* COMPONENTS BEGIN
+
+h1
+  font-size: 62px
+  font-weight: 700
+  letter-spacing: -0.02em
+  color: $dark
+  line-height: 1
+
+.types
+  margin: 0 -6px
+  width: calc(100% + 12px)
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  padding-top: 32px
+
+  &__el
+    padding: 6px
+    font-size: 0
+
+  &__button
+    padding: 12px 25px 12px 12px
+    border-radius: 60px
+    background: #F6F6F6
+    display: flex
+    align-items: center
+    transition: all $transitionSpeed $ease
+    font-size: 18px
+    line-height: 26px
+    // letter-spacing: -0.02em
+    color: rgba($dark, 0.5)
+
+    &.is-active,
+    &:hover
+      color: $dark
+      // letter-spacing: -0.02em
+      font-weight: 700
+
+      .icon
+        opacity: 1
+
+    span
+      position: relative
+      line-height: 1
+
+      .hidden
+        opacity: 0
+        font-weight: 700
+
+      .visible
+        position: absolute
+        left: 0
+        top: 1px
+        opacity: 1
+
+    .icon
+      order: -1
+      min-width: 32px
+      min-height: 32px
+      width: 32px
+      height: 32px
+      font-size: 0
+      border-radius: 50%
+      // background-size: 70% !important
+      // background-position: center !important
+      // background-repeat: no-repeat !important
+      position: relative
+      transition: all $transitionSpeed $ease
+      margin-right: 10px
+      opacity: 0.5
+
+      img
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        width: 60%
+        height: 60%
+        object-fit: contain
+
+    &--violet
+      &.is-active
+        background: rgba($violet, 0.15)
+
+      .icon
+        background: $violet
+
+    &--blue
+      &.is-active
+        background: rgba($blue, 0.15)
+
+      .icon
+        background: $blue
+
+    &--green
+      &.is-active
+        background: rgba($green, 0.15)
+
+      .icon
+        background: $green
+
+    &--yellow
+      &.is-active
+        background: rgba($yellow, 0.15)
+
+      .icon
+        background: $yellow
+
+    &--orange
+      &.is-active
+        background: rgba($orange, 0.15)
+
+      .icon
+        background: $orange
+  
+.card
+  padding: 52px 48px 48px
+  background: $white
+  border-radius: 10px
+  box-shadow: 0px 15px 30px rgba(47, 47, 47, 0.2)
+  position: relative
+  z-index: 10
+  max-width: 452px
+  width: 100%
+  margin: 0 0 0 auto
+
+  &__title
+    // padding-left: 44px
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+    img
+      width: 28px
+      height: auto
+      margin-right: 16px
+
+      &.app
+        width: 22px
+
+      &.medication
+        width: 33px
+
+    p
+      font-size: 28px
+      font-weight: 700
+      color: $dark
+      line-height: 1.25
+
+  &__sub-title
+    font-size: 18px
+    line-height: 1.7
+    font-weight: 500
+    margin-top: 16px
+
+  &__elements
+    padding-top: 20px
+    margin: 0 -4px
+    width: calc(100% + 8px)
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+
+  &__el
+    padding: 4px
+
+  &__el-button
+    padding: 12px
+    border-radius: 8px
+    background: #FDF4DB
+    font-size: 14px
+    font-weight: 600
+    color: $dark
+    display: flex
+    align-items: center
+
+    img
+      width: 11px
+      min-width: 11px
+      height: auto
+      margin-left: 8px
+  
+  &__list
+    padding-top: 8px
+
+    p
+      margin-top: 16px
+      padding-left: 34px
+      font-size: 18px
+      line-height: 26px
+      font-weight: 500
+      color: $black
+      position: relative
+
+      &:before
+        position: absolute
+        content: ''
+        left: 5px
+        top: 4px
+        width: 16px
+        height: 16px
+        border-radius: 50%
+        // background-color: #E2EEFF
+        background-position: center
+        background-repeat: no-repeat
+        background-size: 10px 8px
+        
+
+  &--violet
+    .card__list
+      p:before
+        background-color: #E6E6F8
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.36 4.24 3.8 6.67l4.85-4.85' stroke='%235A58CF' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+
+  &--blue
+    .card__list
+      p:before
+        background-color: #E2EEFF
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.36 4.24 3.8 6.67l4.85-4.85' stroke='%23408BFC' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+
+  &--green
+    .card__list
+      p:before
+        background-color: #D4E7DD
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.36 4.24 3.8 6.67l4.85-4.85' stroke='%234F6258' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+
+  &--yellow
+    .card__list
+      p:before
+        background-color: #FDF4DB
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.36 4.24 3.8 6.67l4.85-4.85' stroke='%23ECC75C' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+
+  &--orange
+    .card__list
+      p:before
+        background-color: #FEEFEF
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.36 4.24 3.8 6.67l4.85-4.85' stroke='%23CF6D58' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+
+  .btn
+    width: 100%
+    margin-top: 40px
+
+  &__price
+    width: 100%
+    text-align: center
+    margin-top: 24px
+    font-size: 16px
+    font-weight: 500
+
+
++r($desktop)
+  h1
+    font-size: 54px
+
+  .card
+    padding: 32px
+
++r($tablet)
+  h1
+    font-size: 50px
+    letter-spacing: -0.01em
+
+  .types
+    margin: 0 -4px
+    width: calc(100% + 8px)
+    padding-top: 26px
+
+    &__el
+      padding: 6px 4px
+
+    &__button
+      padding: 8px 12px 8px 8px
+      font-size: 16px
+
+      .icon
+        min-width: 28px
+        min-height: 28px
+        width: 28px
+        height: 28px
+
+  .card
+    padding: 32px 24px 30px
+    border-radius: 8px
+    margin: 0
+    width: 100%
+    max-width: 100%
+
+    &__title
+      min-height: 32px
+      align-items: center
+
+      img
+        width: 22px
+        margin-right: 12px
+        margin-left: -2px
+
+        &.app
+          width: 12px
+
+        &.medication
+          width: 24px
+
+        &.community
+          width: 24px
+
+      p
+        font-size: 22px
+        margin-bottom: -4px
+
+    &__sub-title
+      font-size: 16px
+
+    &__list
+
+      p
+        font-size: 16px
+        line-height: 1.4
+        margin-top: 18px
+
+    &__el-button
+      padding: 12px 6px
+      font-size: 12px
+
+      img
+        margin-left: 6px
+
+    .btn
+      margin-top: 30px
+
+    &__price
+      font-size: 14px
+
+
+/* COMPONENTS END

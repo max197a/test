@@ -1,0 +1,165 @@
+/* HERO BEGIN
+  
+.hero
+  min-height: 100vh
+  display: flex
+  align-items: center
+  font-size: 0
+  overflow: hidden
+  position: relative
+  z-index: 10
+
+  &__grid
+    display: flex
+    align-items: center
+
+  &__information
+    width: 50%
+    max-width: 600px
+    padding-right: 40px
+    padding-top: 20px
+    position: relative
+    z-index: 10
+
+    p
+      font-size: 20px
+      font-weight: 400
+      font-family: $quincy
+      color: $black
+      margin-top: 18px
+
+  .types
+    max-width: 500px
+
+  .card-container
+    padding: 40px 0
+
+  &__slider
+    position: relative
+    width: 50%
+    padding-right: 14px
+
+    .tns-ovh
+      overflow: visible
+      transition: all $transitionSpeed $ease
+
+    .tns-nav
+      position: absolute
+      left: 0
+      top: 0
+      z-index: 100
+
+  &__bg-container
+    position: fixed
+    width: 50%
+    height: 100vh
+    left: 50%
+    top: 0
+
+  &__bg
+    position: absolute
+    height: auto
+    left: 43%
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: auto
+    height: 107vh
+    font-size: 0
+
+    &.mobile
+      display: none
+
+    path
+      transition: all $transitionSpeed $ease
+
+    &.blue
+      path
+        fill: $blue
+
+    &.green
+      path
+        fill: $green
+
+    &.yellow
+      path
+        fill: $yellow
+
+    &.orange
+      path
+        fill: $orange
+
++r($desktop)
+  .hero
+    &__information
+      padding-right: 25px
+
++r($tablet)
+  .hero
+
+    .types
+      max-width: 100%
+
+    &__grid
+      flex-direction: column
+
+    .card-container
+      padding: 0
+
+    &__information
+      width: 100%
+      max-width: 100%
+      padding: 0 0 32px
+
+      p
+        margin-top: 18px
+        letter-spacing: -0.004em
+
+    &__bg-container
+      width: 100%
+      position: absolute
+      left: 0
+      top: 0
+      transform: none
+
+    &__bg
+      width: 100%
+      left: 0
+      top: 0
+      transform: none
+      height: auto
+
+      &.desktop
+        display: none
+
+      &.mobile
+        display: block
+
+    &__slider
+      overflow: hidden
+      padding: 32px 24px 177px
+      margin: 0 -24px
+      width: calc(100% + 48px)
+
+      .tns-slider
+        height: auto !important
+
+      .tns-ovh
+        height: auto !important
+
+      .slide
+        transition: opacity 0.35s $ease
+        opacity: 0.2
+        height: 0
+        visibility: hidden
+
+      .tns-slide-active
+        opacity: 1
+        height: auto
+        visibility: visible
+
+      [js-tns-slider]
+        transform: none !important
+
+
+
+/* HERO END
